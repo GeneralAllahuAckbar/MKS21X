@@ -135,6 +135,10 @@ public class WordSearch{
     public static void main(String[] args) {
       String toPrint = "\n"; //Prints all at once to prevent printing things then having exception occur.
       try {
+	  if (args.length == 0) {
+	         System.out.println("\n3 Minumum Arguments Required. Proper Usage: java WordSearch [int rows, int cols, String filename [int seed [String key]]]");
+
+	  }
         if (args[0].equals("0") || args[1].equals("0")) {
           System.out.println("You silly buffoon! Making me do all this extra work! How can you possibly have a grid with length/width of 0?!!??!");
         }
