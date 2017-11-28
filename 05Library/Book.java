@@ -10,4 +10,17 @@ public class Book {
 	this.isbn = isbn;
     }
 
+    public String getTitle() {
+	return title;
+    }
+    public String getAuthor() {
+	return author;
+    }
+    public String getISBN() {
+	return isbn;
+    }
+
+    public String toString() {
+	return title + "," + author + "," + isbn;
+    }
 }
