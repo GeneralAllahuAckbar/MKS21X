@@ -1,4 +1,5 @@
-public class SuperArray {
+import java.util.*;
+public class SuperArray implements Iterable<String>{
   private String[] data;
   private int size;
 
@@ -6,6 +7,9 @@ public class SuperArray {
     data = new String[10];
   }
 
+  public Iterator<String> iterator() {
+      return new SuperArrayIterator(this);
+  }
   public void clear() {
     data = new String[data.length];
     size = 0;
