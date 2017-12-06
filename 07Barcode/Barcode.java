@@ -67,11 +67,11 @@ public class Barcode implements Comparable<Barcode>{
     public String toString() {
       return getCode() + "(" + zip + ")";
     }
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
       Barcode a = new Barcode("10213");
       System.out.println(Barcode.toZip("|:::||||:::::|:|:::||::||:|:::||"));
       System.out.println(a);
-    }
+    }*/
 
 
 }
