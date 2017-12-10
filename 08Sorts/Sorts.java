@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class Sorts{
   public static String name(){
-    return "09.Chen.Jiayang"; 
+    return "09.Chen.Jiayang";
   }
 
     public static void swap(int[] array, int a, int b) {
@@ -31,14 +31,32 @@ public class Sorts{
 	}
     }
 
-    public static void main(String[] args) {
-	int[] a = {3,41,21,2,1,6};
-	selectionSort(a);
-	System.out.println(Arrays.toString(a));
-	int[] b = {3,41,21,2,1,6};
-	insertionSort(b);
-	System.out.println(Arrays.toString(b));
+    public static void bubbleSort(int[] data) {
+      boolean worked = true;
+      int j = data.length;
+      while (j > 0 && worked) {
+        worked = false;
+        for (int i = 0; i < j-1; i++) {
+          if (data[i] > data[i+1]) {
+            swap(data, i, i+1);
+            worked = true;
+          }
+        }
+        j--;
+      }
+    }
 
+    public static void main(String[] args) {
+      int[] thing = {1,213,2,412,21,321,532,543,1,32521,13,5,6342,123,1,124,3,54,2};
+    	     int[] a = thing.clone();
+    	     selectionSort(a);
+    	     System.out.println(Arrays.toString(a));
+    	     int[] b = thing.clone();
+    	     insertionSort(b);
+    	     System.out.println(Arrays.toString(b));
+           int[] c = thing.clone();
+           bubbleSort(c);
+           System.out.println(Arrays.toString(c));
     }
 
 }
