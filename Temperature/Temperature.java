@@ -1,0 +1,10 @@
+public class Temperature {
+    public static double FtoC (double farenheit) {
+	return (farenheit - 32) * 5 / 9;
+    }
+    public static double CtoF (double celcius) {
+	return celcius * 9 / 5 + 32;
+    }
+
+
+}
